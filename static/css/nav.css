@@ -1,0 +1,292 @@
+/* 버튼 */
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.info_h{
+    white-space : normal;
+    font-family: 'GowunDodum-Regular';
+}
+
+
+body {
+        background-color: #809dc8;
+
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+		"header header header header header header header"
+		"a a a main main main card"
+		"a a a main main main card"
+		"footer footer footer footer footer footer footer";
+    max-width: 100%;
+
+}
+
+.card_box {
+    grid-area: card;
+}
+
+
+
+
+.main_title {
+    width: 100%;
+    height: 300px;
+    max-width: 100%;            
+
+    display: grid;
+    grid-area: header;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    position: relative;
+
+}
+
+.main_title img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+
+.category{
+    display: inline-block;
+    max-width: 1200px;
+    color: white;
+    background-color: rgba(11, 38, 106, 0.464);
+    margin: 20px;
+    width: 400px;
+    height: 370px;
+    border-radius: 10px;
+    padding-top: 35px;
+    text-align: center;
+    text-size-adjust: auto;
+
+}
+
+.category button {
+    vertical-align: middle;
+    display: inline-block;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin: 3px auto 5px auto;
+    border-radius: 10px;
+
+    background: #f4f4f4;
+
+    font-size: 25px;
+    font-family: 'KorailRoundGothicBold';
+    color: rgba(19, 19, 19, 0.856);
+
+    
+    color: #183b70;
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out;
+
+}
+
+.category button:hover {
+    background-position: 0;
+}
+
+.left_image {
+    margin: 20px auto 0px auto;
+    width: 400px;
+    height: 400px;
+}
+
+
+
+.left_bar {
+    grid-area: a;
+    width: 430px;
+
+}
+
+.right_bar {
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    border-radius: 10px;
+
+    width: 1200px;
+    height: 98%;
+
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+
+    grid-area: main;
+
+
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    
+}
+.content_img {
+    width: 1200px;
+    height: 70%;
+}
+
+
+/* fr */
+/* .container {
+display: grid;
+grid-template-columns: 200px 200px 1fr 1fr;
+grid-template-rows: 150px 50px 250px 200px 50px;
+gap: 10px 10px;
+}
+.header{
+background-color: blanchedalmond;
+grid-column: 1/5;
+grid-row: 1;
+
+} */
+
+
+
+/* section calendar */
+
+.sec_cal {
+    width: 400px;
+    margin: 0 auto;
+    font-family: "NotoSansR";
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.sec_cal .cal_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 78px;
+}
+
+.sec_cal .cal_nav .year-month {
+    width: 300px;
+    text-align: center;
+    line-height: 1;
+}
+
+.sec_cal .cal_nav .nav {
+    display: flex;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.sec_cal .cal_nav .go-prev,
+.sec_cal .cal_nav .go-next {
+    display: block;
+    width: 50px;
+    height: 78px;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec_cal .cal_nav .go-prev::before,
+.sec_cal .cal_nav .go-next::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000;
+    border-width: 3px 3px 0 0;
+    transition: border 0.1s;
+}
+
+.sec_cal .cal_nav .go-prev:hover::before,
+.sec_cal .cal_nav .go-next:hover::before {
+    border-color: #ed2a61;
+}
+
+.sec_cal .cal_nav .go-prev::before {
+    transform: rotate(-135deg);
+}
+
+.sec_cal .cal_nav .go-next::before {
+    transform: rotate(45deg);
+}
+
+.sec_cal .cal_wrap {
+    padding-top: 40px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.sec_cal .cal_wrap .days {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sec_cal .cal_wrap::after {
+    top: 368px;
+}
+
+.sec_cal .cal_wrap .day {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 7);
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    border-radius:5px
+}
+
+.current.today {
+    background: rgba(253, 192, 47, 0.584);
+}
+
+.sec_cal .cal_wrap .dates {
+    display: flex;
+    flex-flow: wrap;
+    height: 290px;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n -1) {
+    color: #3c6ffa;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n) {
+    color: #ed2a61;
+}
+
+.sec_cal .cal_wrap .day.disable {
+    color: #ddd;
+}
